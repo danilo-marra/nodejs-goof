@@ -22,7 +22,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     # - run: semgrep ci
-    - run: sempgreg --config p/owasp-top-ten --json --output sempreg.json .
+    - run: semgrep --config p/owasp-top-ten --json --output semgrep.json .
 
   sca-snyk:
     name: Snyk Package Scan
@@ -43,7 +43,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          ref: master
+          ref: main
       - name: ZAP Scan
         uses: zaproxy/action-baseline@v0.14.0
         with:
